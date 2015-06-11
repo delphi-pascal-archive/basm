@@ -1,0 +1,13 @@
+BASM v0.5 - Win32 Assembler
+
+CODE:0000    PUSH 040h                                DUMP = 6A 40
+CODE:0002    PUSH TITLE                               DUMP = 68 00 00 00 00
+CODE:0007    PUSH MESSAGE                             DUMP = 68 00 00 00 00
+CODE:000C    PUSH 00h                                 DUMP = 6A 00
+CODE:000E    CALL MESSAGEBOXA                         DUMP = E8 00 00 00 00
+CODE:0013    PUSH 00h                                 DUMP = 6A 00
+CODE:0015    CALL EXITPROCESS                         DUMP = E8 00 00 00 00
+	TITLE               BYTE	00402007
+	MESSAGE             BYTE	00402000
+IMPORT	MESSAGEBOXA         LABEL	00403020
+IMPORT	EXITPROCESS         LABEL	00403028
